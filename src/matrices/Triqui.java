@@ -36,7 +36,7 @@ public class Triqui {
                 tablero[fila][columna] = jugadorActual;
 
                 // Verificar si hay un ganador
-                if (Ganador(tablero, jugadorActual)) {
+                if (ganador(tablero, jugadorActual)) {
                     mostrarTablero(tablero);
                     System.out.println("¡El jugador " + jugadorActual + " ha ganado!");
                     juegoTerminado = true;
@@ -78,7 +78,7 @@ public class Triqui {
     }
 
     //Funcion ganador
-    public static boolean Ganador(char[][] tablero, char jugador) {
+    public static boolean ganador(char[][] tablero, char jugador) {
         // Verificar filas, columnas y diagonales
         for (int i = 0; i < 3; i++) {
             if ((tablero[i][0] == jugador && tablero[i][1] == jugador && tablero[i][2] == jugador) ||
